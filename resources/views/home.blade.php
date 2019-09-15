@@ -6,8 +6,11 @@
         <link rel="icon" href="{{ asset('fuca_tehepero_icon_32x32.ico') }}" sizes="32x32">
     </head>
     <body>
-        <p>ナッラマナム</p>
-        <img src="images/SpiceCurry_Nrmnm.jpg" />
-
+        <ul>
+            <li>
+                <p>ナッラマナム</p>
+                <img src="images/SpiceCurry_Nrmnm.jpg" />
+            </li>
+        </ul>
     </body>
 </html>
