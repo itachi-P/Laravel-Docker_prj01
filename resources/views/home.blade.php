@@ -9,7 +9,11 @@
         <ol>
             <li>
                 <p>ナッラマナム</p>
-                <img src="images/SpiceCurry_Nrmnm.jpg" />
+                <img src="images/SpiceCurry/Nrmnm20190909.jpg" />
+            </li>
+            <li>
+                <p>iloilo</p>
+                <img src="images/SpiceCurry/iloilo20190524.jpg" />
             </li>
         </ol>
     </body>
