@@ -29,12 +29,15 @@ class HomeController extends Controller
         if ($request->file('file')->isValid([])) {
             //$path = $request->file->store('public');
             $filename = $request->file->getClientOriginalName(); //一意なID発行の方が望ましい
-            $move = $request->file->move('./images', $filename);
+            $move = $request->file->move('./images/SpiceCurry/', $filename);
+
+            //仮実装
+            $userid = '1';
 
             $images = new Image;
             $images->fill(['filename' => $filename])->save();
             $images = Image::all();
-            $parameters = ['filename' => $filename, 'images' => $images];
+            $parameters = ['userid' => $userid, 'filename' => $filename, 'images' => $images];
             return view('home', $parameters);
         } else {
             return redirect()
