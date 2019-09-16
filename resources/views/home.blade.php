@@ -11,10 +11,6 @@
             <p>ナッラマナム</p>
             <img src="images/SpiceCurry/Nrmnm20190909.jpg" width="250px" height="200px" />
         </li>
-        <li>
-            <p>iloilo</p>
-            <img src="images/SpiceCurry/iloilo20190524.jpg" width="250px" height="200px" />
-        </li>
     </ol>
 
 {{-- imagesテーブルから取得した保存済み画像リンク一覧 --}}
