@@ -32,12 +32,12 @@ class HomeController extends Controller
             $move = $request->file->move('./images/SpiceCurry/', $filename);
 
             //仮実装
-            $userid = '1';
+            $user_id = '1';
 
             $images = new Image;
-            $images->fill(['userid' => $userid, 'filename' => $filename])->save();
+            $images->fill(['user_id' => $user_id, 'filename' => $filename])->save();
             $images = Image::all();
-            $parameters = ['userid' => $userid, 'filename' => $filename, 'images' => $images];
+            $parameters = ['user_id' => $user_id, 'filename' => $filename, 'images' => $images];
             return view('home', $parameters);
         } else {
             return redirect()
