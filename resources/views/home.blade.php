@@ -18,8 +18,8 @@
 <ul>
     @foreach ($images as $image)
     <li>
-        <a href="images/{{ $image->filename }}" target="_brank">
-            <img src="images/{{ $image->filename }}" width="120px" height="100px" />
+        <a href="images/SpiceCurry/{{ $image->filename }}" target="_brank">
+            <img src="images/SpiceCurry/{{ $image->filename }}" width="120px" height="100px" />
         </a>   
     </li>
     @endforeach
