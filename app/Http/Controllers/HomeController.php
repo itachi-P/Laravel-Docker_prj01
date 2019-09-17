@@ -35,7 +35,7 @@ class HomeController extends Controller
             $userid = '1';
 
             $images = new Image;
-            $images->fill(['filename' => $filename])->save();
+            $images->fill(['userid' => $userid, 'filename' => $filename])->save();
             $images = Image::all();
             $parameters = ['userid' => $userid, 'filename' => $filename, 'images' => $images];
             return view('home', $parameters);
