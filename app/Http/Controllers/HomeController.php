@@ -12,9 +12,6 @@ class HomeController extends Controller
         return view('home', ['images' => $images]);
     }
 
-    /**
-     * ファイルアップロード処理
-     */
     public function upload(Request $request)
     {
         $this->validate($request, [
