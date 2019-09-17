@@ -22,7 +22,7 @@ class HomeController extends Controller
                 'required', // 入力必須であること    
                 'file',     // アップロードされたファイルであること
                 'image',    // 画像ファイルであること
-                'mimes:jpeg,png',   // MIMEタイプを指定
+                'mimes:jpeg,png,mp4',   // MIMEタイプを指定
             ]
         ]);
 
