@@ -8,8 +8,7 @@ http://itachi-p.com
 ---
 
 
-↓ブラウザでMarkdownファイルが読める状態でないと全部詰められて表示、要改善
-<履歴>
+##### 履歴
 
 - 2019/09/17
   - Amazon Virtual Private Cloud (VPC)にてアップロード領域確保
