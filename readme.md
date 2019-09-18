@@ -4,7 +4,13 @@ http://itachi-p.com
 
 ごめんなさい、このページはまだ**工事中**です。
 
+
+---
+
+
+↓ブラウザでMarkdownファイルが読める状態でないと全部詰められて表示、要改善
 <履歴>
+
 - 2019/09/17
   - Amazon Virtual Private Cloud (VPC)にてアップロード領域確保
   - Amazon Elastic Compute Cloud (EC2)インスタンス生成（リージョン：東京ではなく北米西海岸オレゴンを選択）
@@ -16,6 +22,7 @@ http://itachi-p.com
 - 2019/09/19
   - http://itachi-p.com/ のアドレスにてGitHubの当リポジトリを紐付け、連動（仮）公開
 
+
 ---
 
 ### (以後の予定)
@@ -23,6 +30,9 @@ http://itachi-p.com
 - Amazon Simple Storage Service (S3)利用開始、静的ファイル配置
 - Amazon Relational Database Service(RDS)連動開始
 - Amazon Elastic Container Service(ECS)利用開始、Dockerコンテナーの形でデプロイ、公開
+
+
+---
 
 
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
