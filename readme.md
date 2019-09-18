@@ -4,7 +4,7 @@ http://itachi-p.com
 
 ごめんなさい、このページはまだ**工事中**です。
 
-<a href="test.itachi-p.com">※もう1つのテストページ</a>
+<a href="http://test.itachi-p.com">テストページ</a>
 
 ---
 
