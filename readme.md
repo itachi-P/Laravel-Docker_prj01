@@ -4,11 +4,12 @@ http://itachi-p.com
 
 ごめんなさい、このページはまだ**工事中**です。
 
+<a href="test.itachi-p.com">※もう1つのテストページ</a>
 
 ---
 
 
-##### 履歴
+### 履歴
 
 - 2019/09/17
   - Amazon Virtual Private Cloud (VPC)にてアップロード領域確保
