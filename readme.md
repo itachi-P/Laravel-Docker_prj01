@@ -29,7 +29,10 @@ http://itachi-p.com
 
 - Amazon Simple Storage Service (S3)利用開始、静的ファイル配置
 - Amazon Relational Database Service(RDS)連動開始
-- Amazon Elastic Container Service(ECS)利用開始、Dockerコンテナーの形でデプロイ、公開
+- Docker利用法の選択肢
+  - ~~Amazon Elastic Container Service(ECS)~~
+  - ~~またはECSではなくElastic Beanstalk Docker~~
+  - **Elastic Beanstalk Multi-Container Dockerに決定**
 
 
 ---
