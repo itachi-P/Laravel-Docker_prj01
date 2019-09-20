@@ -21,18 +21,27 @@ http://itachi-p.com
   - http://test.itachi-p.com のアドレスで仮公開
 - 2019/09/19
   - http://itachi-p.com/ のアドレスにてGitHubの当リポジトリを紐付け、連動（仮）公開
+- 2019/09/20
+  - Docker利用法の選択肢
+    - ~~Amazon Elastic Container Service(ECS)~~
+    - ~~Elastic Beanstalk Docker (Single Container)~~
+    - **Elastic Beanstalk Multi-Container Dockerに決定**
+  - CircleCI連動（設定段階）
+  - Amazon CloudFormationによりここまでの構築環境をスタックとして記録
 
 
 ---
 
 ### (以後の予定)
 
-- Amazon Simple Storage Service (S3)利用開始、静的ファイル配置
-- Amazon Relational Database Service(RDS)連動開始
-- Docker利用法の選択肢
-  - ~~Amazon Elastic Container Service(ECS)~~
-  - ~~またはECSではなくElastic Beanstalk Docker~~
-  - **Elastic Beanstalk Multi-Container Dockerに決定**
+- Amazon Simple Storage Service (S3)に静的ファイル配置
+- Amazon Relational Database Service(RDS)連動
+- Amazon CloudWatch(Logs)も利用検討
+  - 監視→アラート（Eメール、SMS等）| 設定に基づく何らかのアクション
+    - スケールアウト（パフォーマンス向上）
+    - スケールイン（コスト削減）
+    - イベント発生→自己トリガーにより自動アクション設定
+    - 一定時間ごとのバッチ処理　など
 
 
 ---
