@@ -1,0 +1,50 @@
+version: 1
+
+defaults: &defaults
+  working_directory: ~/app
+  docker:
+    - image: circleci/php:7.3-node-browsers
+    - image: circleci/mysql:5.7
+  environment:
+    - AWS_REGION: ap-northeast-1
+    - APP_DEBUG: true
+    - APP_KEY: base64:
+    - DB_DATABASE: circle_test
+    - DB_USERNAME: root
+    - MYSQL_ALLOW_EMPTY_PASSWORD: true
+
+jobs:
+  build:
+    <<: *defaults
+    steps:
+      - checkout
+      - run:
+        name: install pdo_mysql
+        command:
+          sudo apt update
+          sudo docker-php-ext-install pdo_mysql
+          sudo docker-php-ext-enable pdo_mysql
+      # Download and cache dependencies
+      - restore_cache:
+        keys:
+          - v1-dependencies-{{ checksum "composer.json" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+      - run: composer install -n --prefer-dist
+      -save_cache:
+        paths:
+          - ./vendor
+        key: v1-dependencies-{{ checksum "composer.json" }}
+      # run seeding
+      - run: php artisan migrate
+      - run: php artisan db:seed
+      # run test
+      # ???
+deploy:
+  <<: *defaults
+  steps:
+    - checkout
+    -run:
+      name: Install awsebcli
+      command: |
+        

@@ -1,0 +1,3 @@
+global:
+  application_name: Laravel-Docker_prj01
+  default_region: ap-northeast-1
