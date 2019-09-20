@@ -8,7 +8,6 @@ http://itachi-p.com
 
 ---
 
-
 ### 履歴
 
 - 2019/09/17
@@ -28,7 +27,6 @@ http://itachi-p.com
     - **Elastic Beanstalk Multi-Container Dockerに決定**
   - CircleCI連動（設定段階）
   - Amazon CloudFormationによりここまでの構築環境をスタックとして記録
-
 
 ---
 

@@ -24,3 +24,27 @@ jobs:
           sudo apt update
           sudo docker-php-ext-install pdo_mysql
           sudo docker-php-ext-enable pdo_mysql
+      # Download and cache dependencies
+      - restore_cache:
+        keys:
+          - v1-dependencies-{{ checksum "composer.json" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+      - run: composer install -n --prefer-dist
+      -save_cache:
+        paths:
+          - ./vendor
+        key: v1-dependencies-{{ checksum "composer.json" }}
+      # run seeding
+      - run: php artisan migrate
+      - run: php artisan db:seed
+      # run test
+      # ???
+deploy:
+  <<: *defaults
+  steps:
+    - checkout
+    -run:
+      name: Install awsebcli
+      command: |
+        
