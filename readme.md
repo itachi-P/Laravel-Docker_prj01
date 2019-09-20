@@ -25,10 +25,13 @@ http://itachi-p.com
     - ~~Amazon Elastic Container Service(ECS)~~
     - ~~Elastic Beanstalk Docker (Single Container)~~
     - **Elastic Beanstalk Multi-Container Dockerに決定**
-  - CircleCI連動（設定段階）
+  - CircleCI連動（設定段階）※実装優先度低（後でよい）
     - [（公式）CircleCI を設定する](https://circleci.com/docs/ja/2.0/configuration-reference/)
     - [（公式）2.0 config.yml の設定例](https://circleci.com/docs/ja/2.0/sample-config/)
   - Amazon CloudFormationによりここまでの構築環境をスタックとして記録
+  - Amazon CloudWatchによる監視利用開始
+    - Amazon CloudWatch(Logs)利用→S3にログ保存
+    - Amazon Simple Notification Service(SNS)利用→重大な影響が発生した際にメール通知する設定を有効化
 
 ---
 
