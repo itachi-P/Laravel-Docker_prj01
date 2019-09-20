@@ -26,6 +26,8 @@ http://itachi-p.com
     - ~~Elastic Beanstalk Docker (Single Container)~~
     - **Elastic Beanstalk Multi-Container Dockerに決定**
   - CircleCI連動（設定段階）
+    - [（公式）CircleCI を設定する](https://circleci.com/docs/ja/2.0/configuration-reference/)
+    - [（公式）2.0 config.yml の設定例](https://circleci.com/docs/ja/2.0/sample-config/)
   - Amazon CloudFormationによりここまでの構築環境をスタックとして記録
 
 ---
@@ -36,6 +38,9 @@ http://itachi-p.com
   - シングルコンテナの場合のみDockerfileによるカスタムイメージ使用可能、マルチコンテナはDockerrun.aws.jsonのみ
   - Amazon Elastic Container Registry(Amazon ECR、後述)にイメージを保存する場合はカスタムイメージ保存制限なし
 - [（公式）Elastic Beanstalk への Laravel アプリケーションのデプロイ](https://docs.aws.amazon.com/ja_jp/elasticbeanstalk/latest/dg/php-laravel-tutorial.html)
+  - [（公式）単一コンテナのDocker設定](https://docs.aws.amazon.com/ja_jp/elasticbeanstalk/latest/dg/single-container-docker-configuration.html)
+  - [（公式）複数コンテナのDocker設定](https://docs.aws.amazon.com/ja_jp/elasticbeanstalk/latest/dg/create_deploy_docker_v2config.html#create_deploy_docker_v2config_dockerrun)
+  - [入門Docker](https://y-ohgi.com/introduction-docker/)
 - Amazon Elastic Container Registry (Amazon ECR)を使用して(有料)AWS にカスタムDockerイメージを保存するか、それともDockerHubから'docker login'するか(ECRを使わない場合は認証情報のS3への保存が必要）要検討
 - Amazon Simple Storage Service (S3)に静的ファイル配置
 - Amazon Relational Database Service(RDS)連動

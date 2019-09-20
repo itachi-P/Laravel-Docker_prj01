@@ -1,4 +1,4 @@
-version: 1
+version: 2
 
 defaults: &defaults
   working_directory: ~/app
@@ -47,4 +47,21 @@ deploy:
     -run:
       name: Install awsebcli
       command: |
-        
+        sudo apt-get -y -qq update
+        sudo apt-get install python-pip python-dev build-essential
+        sudo pip install awsebcli --upgrade
+    -run:
+      name: eb deploy
+      command: eb deploy LaravelDockerPrj01-env
+
+workflows:
+  version: 2
+  build_and_deploy:
+    jobs:
+      - build
+      - deploy:
+        filters:
+          branches:
+            only:
+              - master
+
