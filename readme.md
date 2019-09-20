@@ -28,6 +28,7 @@ http://itachi-p.com
   - CircleCI連動（設定段階）※実装優先度低（後でよい）
     - [（公式）CircleCI を設定する](https://circleci.com/docs/ja/2.0/configuration-reference/)
     - [（公式）2.0 config.yml の設定例](https://circleci.com/docs/ja/2.0/sample-config/)
+    - [実践で学ぶ、Laravelをローカルから本番環境にデプロイするまで](https://logmi.jp/tech/articles/321252)
   - Amazon CloudFormationによりここまでの構築環境をスタックとして記録
   - Amazon CloudWatchによる監視利用開始
     - Amazon CloudWatch(Logs)利用→S3にログ保存
