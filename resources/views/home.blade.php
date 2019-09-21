@@ -6,12 +6,6 @@
     <link rel="icon" href="{{ asset('fuca_tehepero_icon_32x32.ico') }}" sizes="32x32">
 </head>
 <body>
-    {{-- <ol>
-        <li>
-            <p>ナッラマナム</p>
-            <img src="images/SpiceCurry/Nrmnm20190909.jpg" width="250px" height="200px" />
-        </li>
-    </ol> --}}
 
 {{-- imagesテーブルから取得した保存済み画像リンク一覧 --}}
 @if (isset($images))    
