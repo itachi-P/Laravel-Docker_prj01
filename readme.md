@@ -59,8 +59,9 @@ http://itachi-p.com
   - CircleCI連動で自動ビルド、テスト、デプロイ確認
     - GitHubの該当リポジトリ上でPR（プルリク）が作成されたら自動的にビルド・テストを実行
     - masterブランチにPRがmergeされたら `eb deploy`コマンドを実行し、自動でデプロイ
-- 更にElastic Beanstalk → (ECR &) ECS
-- 更に更にECS → （Kubernetesについて学習した上で）EKS？ *どのみちk8sにはいずれ対応する*
+- 更に余裕ができればECSへの理解を深め、Elastic Beanstalk → (ECR &) ECSに移行
+- 更に更にECS → （Kubernetesについて学習した上で）EKS？
+- *いずれにせよ、今後k8s(やGCPやGolang)にも対応していくが、まずはLaravel & AWS & Dockerにある程度習熟する*
 
 ---
 
