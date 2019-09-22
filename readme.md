@@ -20,15 +20,16 @@ http://itachi-p.com
   - http://test.itachi-p.com のアドレスで仮公開
 - 2019/09/19
   - http://itachi-p.com/ のアドレスにてGitHubの当リポジトリを紐付け、連動（仮）公開
-- 2019/09/20
+- 2019/09/20〜23
   - Docker利用法の選択肢
-    - ~~Amazon Elastic Container Service(ECS)~~
-    - ~~Elastic Beanstalk Docker (Single Container)~~
-    - **Elastic Beanstalk Multi-Container Dockerに決定**
+    - ~~Amazon Elastic Container Service(ECS)~~　**次回利用予定**
+    - ~~Elastic Beanstalk Docker (Single Container)~~ *Multiの方が柔軟に対応可能*
+    - **Elastic Beanstalk Multi-Container Docker 今回はこれに決定**
   - CircleCI連動（設定段階）※実装優先度低（後でよい）
     - [（公式）CircleCI を設定する](https://circleci.com/docs/ja/2.0/configuration-reference/)
     - [（公式）2.0 config.yml の設定例](https://circleci.com/docs/ja/2.0/sample-config/)
     - [実践で学ぶ、Laravelをローカルから本番環境にデプロイするまで](https://logmi.jp/tech/articles/321252)
+      - .circleci/config.ymlの設定(今ここ)→CircleCIのWebサイトに行って設定→start building
   - Amazon CloudFormationによりここまでの構築環境をスタックとして記録
   - Amazon CloudWatchによる監視利用開始
     - Amazon CloudWatch(Logs)利用→S3にログ保存
@@ -54,13 +55,18 @@ http://itachi-p.com
     - スケールイン（コスト削減）
     - イベント発生→自己トリガーにより自動アクション設定
     - 一定時間ごとのバッチ処理　など
+- :認証にAmazon Cognito利用を検討
+  - サーバレスアーキテクチャにより一切コードを書かずに認証（サインアップ・サインイン）機能実装も可能
+  - [プログラミングせずにCognitoで新規ユーザー登録＆サインインを試してみる](https://dev.classmethod.jp/cloud/aws/sign-up-and-sign-in-by-cognito-with-awscli/)
 - 肝心のポートフォリオの中身の作成
   - 上記をDockerイメージと共に、または上記も含めたカスタムイメージをAWSにデプロイ
   - CircleCI連動で自動ビルド、テスト、デプロイ確認
     - GitHubの該当リポジトリ上でPR（プルリク）が作成されたら自動的にビルド・テストを実行
     - masterブランチにPRがmergeされたら `eb deploy`コマンドを実行し、自動でデプロイ
+- [:new:] Dockerイメージを公開リポジトリではなくプライベートリポジトリに置くよう変更
+  - [Amazon S3をDockerプライベートレポジトリにしてAWS ElasticBeanstalk環境にデプロイ](https://aws.typepad.com/sajp/2014/06/eb-docker-private-repo.html)
 - 更に余裕ができればECSへの理解を深め、Elastic Beanstalk → (ECR &) ECSに移行
-- 更に更にECS → （Kubernetesについて学習した上で）EKS？
+- [:horse:] 更に更にECS → （Kubernetesについて学習した上で）EKS？
 - *いずれにせよ、今後k8s(やGCPやGolang)にも対応していくが、まずはLaravel & AWS & Dockerにある程度習熟する*
 
 ---
