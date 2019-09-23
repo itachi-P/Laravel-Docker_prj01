@@ -1,10 +1,11 @@
-http://itachi-p.com
+
 # itachi-P's GitHub repository
-##### ※ブラウザからアクセスされた方向けのメッセージ
+##### ※http://itachi-p.com からアクセスされた方向けのメッセージ
 
 ごめんなさい、このページはまだ**工事中**です。
 
-<a href="http://test.itachi-p.com">テストページ</a>
+<a href="http://test.itachi-p.com">テストページ1（停止中）</a>
+<a href="http://13.231.255.96">テストページ2（準備中）</a>
 
 ---
 
@@ -79,7 +80,15 @@ http://itachi-p.com
   - CloudWatchにより複数のメトリクス監視→何かしらのイベント（アクセス数・パフォーマンス変化や定時実行イベント等）・障害等の発生→*Lambda*によりAPI起動→タスク、スケジュール、バッチ処理、障害対応、スケールアウト（パフォーマンス向上）、スケールイン（コスト削減）を実行
 - MySQL → Amazon Database Aurora（MySQL5.6互換）の利用
   - データベースもAmazon RDS/Aurora等のマネージドサービスを利用し、インフラ導入及び運用のコストカット、インフラ層（レイヤー）の管理をAmazonに運用委任して最上位のアプリケーション開発だけに集中する選択肢も選べるように
-
+- Amazon 開発者用ツール群の使用検討
+  - AWS Developer Tools
+　アクセスコントロール用のIAM、監査ログ用のAWS CloudTrail、イベントトリガー用のAmazon CloudWatch等と連携  
+    - CodePipeline - リリース自動化サービス、他のツール群の連携(CircleCI)
+    - CodeCommit - ソース管理 (GitHub)
+    - CodeBuild - ビルドテスト実行ツール
+    - CodeDeploy - デプロイオーケストレーションツール
+    - CodeStar - 継続的デリバリーデリバリーツールチェーン全体を設定
+    　　ビルドするアプリケーションのタイプと使用するプログラミング言語を選択すると包括的なツールチェーンが作成され最初の土台となるコードと共にプリロードされる
 ---
 
 
