@@ -5,7 +5,7 @@
 ごめんなさい、このページはまだ**工事中**です。
 
 <a href="http://test.itachi-p.com">テストページ1 Docker & Laradock（停止中）</a>
-<a href="http://http://tutorials-env.6mt7peepvf.ap-northeast-1.elasticbeanstalk.com/">テストページ2 PHP & Laravel（準備中）</a>
+<a href="http://tutorials-env.6mt7peepvf.ap-northeast-1.elasticbeanstalk.com/">テストページ2 PHP & Laravel（準備中）</a>
 
 ---
 
