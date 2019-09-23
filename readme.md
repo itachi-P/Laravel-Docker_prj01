@@ -49,7 +49,7 @@ http://itachi-p.com
 - Amazon Elastic Container Registry (Amazon ECR)を使用して(有料)AWS にカスタムDockerイメージを保存するか、それともDockerHubから'docker login'するか(ECRを使わない場合は認証情報のS3への保存が必要）要検討
 - Amazon Simple Storage Service (S3)に静的ファイル配置
 - Amazon Relational Database Service(RDS)連動
-- Amazon CloudWatch(Logs)も利用検討
+- Amazon CloudWatch(Logs)利用
   - 監視→アラート（Eメール、SMS等）| 設定に基づく何らかのアクション
     - スケールアウト（パフォーマンス向上）
     - スケールイン（コスト削減）
@@ -63,11 +63,15 @@ http://itachi-p.com
   - CircleCI連動で自動ビルド、テスト、デプロイ確認
     - GitHubの該当リポジトリ上でPR（プルリク）が作成されたら自動的にビルド・テストを実行
     - masterブランチにPRがmergeされたら `eb deploy`コマンドを実行し、自動でデプロイ
-- [:new:] Dockerイメージを公開リポジトリではなくプライベートリポジトリに置くよう変更
+- :new: Dockerイメージを公開リポジトリではなくプライベートリポジトリに置くよう変更
   - [Amazon S3をDockerプライベートレポジトリにしてAWS ElasticBeanstalk環境にデプロイ](https://aws.typepad.com/sajp/2014/06/eb-docker-private-repo.html)
 - 更に余裕ができればECSへの理解を深め、Elastic Beanstalk → (ECR &) ECSに移行
-- [:horse:] 更に更にECS → （Kubernetesについて学習した上で）EKS？
+- :horse: 更に更にECS → （Kubernetesについて学習した上で）EKS？
 - *いずれにせよ、今後k8s(やGCPやGolang)にも対応していくが、まずはLaravel & AWS & Dockerにある程度習熟する*
+
+(その他)
+- サーバレス・イベントドリブン化
+  - CloudWatchにより複数のメトリクス監視→何かしらのイベント（アクセス数・パフォーマンス変化や定時実行イベント等）・障害等の発生→LambdaによりAPI起動→タスク、スケジュール、バッチ処理、障害対応、スケールアウト（パフォーマンス向上）、スケールイン（コスト削減）を実行
 
 ---
 
