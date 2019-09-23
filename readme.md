@@ -1,10 +1,11 @@
-http://itachi-p.com
+
 # itachi-P's GitHub repository
-##### ※ブラウザからアクセスされた方向けのメッセージ
+##### ※http://itachi-p.com からアクセスされた方向けのメッセージ
 
 ごめんなさい、このページはまだ**工事中**です。
 
-<a href="http://test.itachi-p.com">テストページ</a>
+<a href="http://test.itachi-p.com">テストページ1（停止中）</a>
+<a href="http://13.231.255.96">テストページ2（準備中）</a>
 
 ---
 
