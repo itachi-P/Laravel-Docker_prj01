@@ -4,8 +4,8 @@
 
 ごめんなさい、このページはまだ**工事中**です。
 
-<a href="http://test.itachi-p.com">テストページ1 Docker & Laradock（停止中）</a>
-<a href="http://tutorials-env.6mt7peepvf.ap-northeast-1.elasticbeanstalk.com/">テストページ2 PHP & Laravel（準備中）</a>
+<a href="http://test.itachi-p.com">テストページ1 Docker & Laradock（停止中）</a><br>
+<a href="http://tutorials-env.6mt7peepvf.ap-northeast-1.elasticbeanstalk.com/">テストページ2 PHP & Laravel（テスト開発中）</a>
 
 ---
 
@@ -35,6 +35,11 @@
   - Amazon CloudWatchによる監視利用開始
     - Amazon CloudWatch(Logs)利用→S3にログ保存
     - Amazon Simple Notification Service(SNS)利用→重大な影響が発生した際にメール通知する設定を有効化
+- 2019/9/24
+  - ローカルでPHP7.3/Laravel/MySQLにてテストアプリ作成
+  - 上記アプリケーションをAWS Elastic Beanstalkにデプロイするためにソースバンドル(zip)を作成
+  - Elastic Beanstalk 管理ページからデプロイ
+  - <a href="http://tutorials-env.6mt7peepvf.ap-northeast-1.elasticbeanstalk.com/">テストページ2 PHP & Laravel</a>で動作確認
 
 ---
 
