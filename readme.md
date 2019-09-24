@@ -40,6 +40,9 @@
   - 上記アプリケーションをAWS Elastic Beanstalkにデプロイするためにソースバンドル(zip)を作成
   - Elastic Beanstalk 管理ページからデプロイ
   - <a href="http://tutorials-env.6mt7peepvf.ap-northeast-1.elasticbeanstalk.com/">テストページ2 PHP & Laravel</a>で動作確認
+  - 上記ローカルで作成したアプリケーションのデータベース設定をローカルのMySQL(Ver5.7.27)からAWS RDSのMySQL(Ver5.7.26)に設定変更
+  - ソースバンドル再作成、デプロイ、AWS RDS接続確認
+  
 
 ---
 
