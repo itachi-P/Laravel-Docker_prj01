@@ -1,11 +1,13 @@
 
 # itachi-P's GitHub repository
 ##### ※http://itachi-p.com からアクセスされた方向けのメッセージ
+(よりセキュアなHTTPS接続に対応しました)
+<a href="https://itachi-p.com">HTTPS接続（このページ）</a>
 
-ごめんなさい、このページはまだ**工事中**です。
+このページはまだ**工事(準備)中**です。
 
-<a href="http://test.itachi-p.com">テストページ1 Docker & Laradock（停止中）</a><br>
-<a href="http://tutorials-env.6mt7peepvf.ap-northeast-1.elasticbeanstalk.com/">テストページ2 PHP & Laravel（テスト開発中）</a>
+<a href="https://test.itachi-p.com">テストページ1 Docker & Laradock（停止中）</a><br>
+<a href="https://aws_eb-laravel.itachi-p.com/">テストページ2 PHP & Laravel & AWS Elastic Beanstalk/IAM/SCM(電子証明)/RDS(MySQL)/S3/Load Balancer/etc.（テスト開発中）</a>
 
 ---
 
@@ -41,7 +43,9 @@
   - Elastic Beanstalk 管理ページからデプロイ
   - <a href="http://tutorials-env.6mt7peepvf.ap-northeast-1.elasticbeanstalk.com/">テストページ2 PHP & Laravel</a>で動作確認
   - 上記ローカルで作成したアプリケーションのデータベース設定をローカルのMySQL(Ver5.7.27)からAWS RDSのMySQL(Ver5.7.26)に設定変更
-  - ソースバンドル再作成、デプロイ、AWS RDS接続確認
+  - ソースバンドル再作成→手動デプロイを`eb deploy`で自動化
+  - AWS EB上からRDSのｍMySQLに接続確認
+  - AWS EC2上で新規Application Load Balancerを作成し、SCM電子証明書によるセキュアなHTTPS接続に対応
   
 
 ---
