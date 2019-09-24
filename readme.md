@@ -6,8 +6,8 @@
 
 このページはまだ**工事(準備)中**です。
 
-<a href="https://test.itachi-p.com">テストページ1 Docker & Laradock（停止中）</a><br>
-<a href="https://aws_eb-laravel.itachi-p.com/">テストページ2 PHP & Laravel & AWS Elastic Beanstalk/IAM/SCM(電子証明)/RDS(MySQL)/S3/Load Balancer/etc.（テスト開発中）</a>
+<a href="http://test.itachi-p.com">テストページ1 Docker & Laradock（停止中）</a><br>
+<a href="http://aws_eb-laravel.itachi-p.com/">テストページ2 PHP7 & Laravel & AWS Elastic Beanstalk/IAM/ACM(電子証明)/RDS(MySQL)/S3/Load Balancer/etc.（テスト開発中）</a>
 
 ---
 
@@ -45,8 +45,16 @@
   - 上記ローカルで作成したアプリケーションのデータベース設定をローカルのMySQL(Ver5.7.27)からAWS RDSのMySQL(Ver5.7.26)に設定変更
   - ソースバンドル再作成→手動デプロイを`eb deploy`で自動化
   - AWS EB上からRDSのｍMySQLに接続確認
-  - AWS EC2上で新規Application Load Balancerを作成し、SCM電子証明書によるセキュアなHTTPS接続に対応
-  
+  - AWS EC2上で新規Application Load Balancerを作成し、ACM電子証明書によるセキュアなHTTPS接続に対応
+  - [（公式）Elastic Beanstalk への Laravel アプリケーションのデプロイ](https://docs.aws.amazon.com/ja_jp/elasticbeanstalk/latest/dg/php-laravel-tutorial.html)
+  - Amazon Simple Storage Service (S3)に静的ファイル配置
+  - Amazon Relational Database Service(RDS)連動
+  - Amazon CloudWatch(Logs)利用
+    - 監視→アラート（Eメール、SMS等）| 設定に基づく何らかのアクション
+      - スケールアウト（パフォーマンス向上）
+      - スケールイン（コスト削減）
+      - イベント発生→自己トリガーにより自動アクション設定
+      - 一定時間ごとのバッチ処理　など
 
 ---
 
@@ -58,20 +66,11 @@
 - Dockerrun.aws.jsonファイルの記述（バージョン１ - シングルコンテナ、バージョン２ - マルチコンテナ）
   - シングルコンテナの場合のみDockerfileによるカスタムイメージ使用可能、マルチコンテナはDockerrun.aws.jsonのみ
   - Amazon Elastic Container Registry(Amazon ECR、後述)にイメージを保存する場合はカスタムイメージ保存制限なし
-- [（公式）Elastic Beanstalk への Laravel アプリケーションのデプロイ](https://docs.aws.amazon.com/ja_jp/elasticbeanstalk/latest/dg/php-laravel-tutorial.html)
-  - [（公式）単一コンテナのDocker設定](https://docs.aws.amazon.com/ja_jp/elasticbeanstalk/latest/dg/single-container-docker-configuration.html)
-  - [（公式）複数コンテナのDocker設定](https://docs.aws.amazon.com/ja_jp/elasticbeanstalk/latest/dg/create_deploy_docker_v2config.html#create_deploy_docker_v2config_dockerrun)
-  - [入門Docker](https://y-ohgi.com/introduction-docker/)
+- [（公式）単一コンテナのDocker設定](https://docs.aws.amazon.com/ja_jp/elasticbeanstalk/latest/dg/single-container-docker-configuration.html)
+- [（公式）複数コンテナのDocker設定](https://docs.aws.amazon.com/ja_jp/elasticbeanstalk/latest/dg/create_deploy_docker_v2config.html#create_deploy_docker_v2config_dockerrun)
+- [入門Docker](https://y-ohgi.com/introduction-docker/)
 - Amazon Elastic Container Registry (Amazon ECR)を使用して(有料)AWS にカスタムDockerイメージを保存するか、それともDockerHubから'docker login'するか(ECRを使わない場合は認証情報のS3への保存が必要）要検討
-- Amazon Simple Storage Service (S3)に静的ファイル配置
-- Amazon Relational Database Service(RDS)連動
-- Amazon CloudWatch(Logs)利用
-  - 監視→アラート（Eメール、SMS等）| 設定に基づく何らかのアクション
-    - スケールアウト（パフォーマンス向上）
-    - スケールイン（コスト削減）
-    - イベント発生→自己トリガーにより自動アクション設定
-    - 一定時間ごとのバッチ処理　など
-- :認証にAmazon Cognito利用を検討
+- 認証にAmazon Cognito利用を検討
   - サーバレスアーキテクチャにより一切コードを書かずに認証（サインアップ・サインイン）機能実装も可能
   - [プログラミングせずにCognitoで新規ユーザー登録＆サインインを試してみる](https://dev.classmethod.jp/cloud/aws/sign-up-and-sign-in-by-cognito-with-awscli/)
 - 肝心のポートフォリオの中身の作成
@@ -79,10 +78,10 @@
   - CircleCI連動で自動ビルド、テスト、デプロイ確認
     - GitHubの該当リポジトリ上でPR（プルリク）が作成されたら自動的にビルド・テストを実行
     - masterブランチにPRがmergeされたら `eb deploy`コマンドを実行し、自動でデプロイ
-- :new: Dockerイメージを公開リポジトリではなくプライベートリポジトリに置くよう変更
+- Dockerイメージを公開リポジトリではなくプライベートリポジトリに置くよう変更
   - [Amazon S3をDockerプライベートレポジトリにしてAWS ElasticBeanstalk環境にデプロイ](https://aws.typepad.com/sajp/2014/06/eb-docker-private-repo.html)
 - 更に余裕ができればECSへの理解を深め、Elastic Beanstalk → (ECR &) ECSに移行
-- :horse: 更に更にECS → （Kubernetesについて学習した上で）EKS？
+- 更に更にECS → （Kubernetesについて学習した上で）EKS？
 - *いずれにせよ、今後k8s(やGCPやGolang)にも対応していくが、まずはLaravel & AWS & Dockerにある程度習熟する*
 
 (その他)
