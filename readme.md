@@ -1,17 +1,17 @@
 
 # itachi-P's GitHub repository
 ##### ※http://itachi-p.com からアクセスされた方向けメッセージ
-(よりセキュアなHTTPS接続に対応しました)
-<a href="https://itachi-p.com">HTTPS接続（このページ）</a>
+(よりセキュアなHTTPS接続に対応しました)<br>
+<a href="https://itachi-p.com">HTTPS接続（このページ）</a><br>
 <a href="https://github.com/itachi-P/Laravel-Docker_prj01/">当GitHubリポジトリ</a>
 
 このページはまだ**工事(準備)中**です。
 
-<a href="http://test.itachi-p.com">テストページ1 Docker & Laradock（開発中）</a><br>
+<a href="http://laraveldockertest01-env.vahqeumhmx.ap-northeast-1.elasticbeanstalk.com/">テストページ1B Docker & Laradock（開発中）</a><br>
 ~~テストページ2~~ （テスト開発完了、稼働停止済）<br>
 - PHP7.2 & Laravel & AWS Elastic Beanstalk/IAM(ユーザー・グループ権限管理)/ACM(HTTPS接続用電子証明)<br>
 /RDS(MySQL)/S3（ストレージ）/Load Balancer（負荷分散）<br>
-/CloudWatch[Logs]（メトリクス監視→通知・パフォーマンスコントロール)/SimpleNotificationService(CloudWatchと連動したアラートメール通知)/etc.
+/CloudWatch[Logs]（メトリクス監視→通知・パフォーマンス管理)/SimpleNotificationService(CloudWatchと連動したアラートメール通知)/etc.
 
 ---
 
@@ -41,7 +41,7 @@
   - Amazon CloudWatchによる監視利用開始
     - Amazon CloudWatch(Logs)利用→S3にログ保存
     - Amazon Simple Notification Service(SNS)利用→重大な影響が発生した際にメール通知する設定を有効化
-- 2019/9/24
+- 2019/09/24
   - ローカルでPHP7.3/Laravel/MySQLにてテストアプリ作成
   - 上記アプリケーションをAWS Elastic Beanstalkにデプロイするためにソースバンドル(zip)を作成
   - Elastic Beanstalk 管理ページからデプロイ
@@ -65,6 +65,8 @@
   - Docker非使用のLaravel & データベース接続(RDS上のMySQL)を含むAWS各種マネージドサービスのテスト駆動が完了した為Elastic Beanstalk環境インスタンス停止・終了
   - DockerベースでのLaravel開発（Laradock）再開（このreadme.mdを含むリポジトリの本体）
     - **最終的には開発したLaravelアプリも含めたカスタムイメージ＆Dockerfileを作成し、それをCircleCIを通して自動ビルド・テスト・デプロイする**
+- 2019/09/26
+  - Docker学習
   
 ---
 
