@@ -7,7 +7,8 @@
 このページはまだ**工事(準備)中**です。
 
 <a href="http://test.itachi-p.com">テストページ1 Docker & Laradock（停止中）</a><br>
-<a href="http://aws_eb-laravel.itachi-p.com/">テストページ2 PHP7 & Laravel & AWS Elastic Beanstalk/IAM/ACM(電子証明)/RDS(MySQL)/S3/Load Balancer/etc.（テスト開発中）</a>
+~~テストページ2~~ （テスト開発完了、停止済）
+PHP7 & Laravel & AWS Elastic Beanstalk/IAM/ACM(電子証明)/RDS(MySQL)/S3/Load Balancer/etc.
 
 ---
 
@@ -55,7 +56,11 @@
       - スケールイン（コスト削減）
       - イベント発生→自己トリガーにより自動アクション設定
       - 一定時間ごとのバッチ処理　など
-
+- 2019/09/25
+  - Docker非使用のLaravel & データベース接続(RDS上のMySQL)を含むAWS各種マネージドサービスのテスト駆動完了した為Elastic Beanstalk環境停止・終了
+  - DockerベースでのLaravel開発（Laradock）再開
+    - **最終的には開発したLaravelアプリも含めたカスタムイメージ＆Dockerfileを作成し、それをCircleCIを通して自動ビルド・テスト・デプロイする**
+  
 ---
 
 ### (以後の予定)
