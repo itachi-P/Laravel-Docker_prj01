@@ -6,9 +6,11 @@
 
 このページはまだ**工事(準備)中**です。
 
-<a href="http://test.itachi-p.com">テストページ1 Docker & Laradock（停止中）</a><br>
+<a href="http://test.itachi-p.com">テストページ1 Docker & Laradock（開発中）</a><br>
 ~~テストページ2~~ （テスト開発完了、停止済）<br>
-- PHP7.2 & Laravel & AWS Elastic Beanstalk/IAM(ユーザー・グループ権限管理)/ACM(HTTPS接続用電子証明)/RDS(MySQL)/S3（ストレージ）/Load Balancer（負荷分散）/CloudWatch[Logs]（監視→通知・パフォーマンスコントロール)/SimpleNotificationService(SNS、CloudWatchと連動し挙動の変化に応じたアラートのメール通知)/etc.
+- PHP7.2 & Laravel & AWS Elastic Beanstalk/IAM(ユーザー・グループ権限管理)/ACM(HTTPS接続用電子証明)
+/RDS(MySQL)/S3（ストレージ）/Load Balancer（負荷分散）
+/CloudWatch[Logs]（監視→通知・パフォーマンスコントロール)/SimpleNotificationService(SNS、CloudWatchと連動したアラートメール通知)/etc.
 
 ---
 
@@ -106,6 +108,7 @@
     - CodeDeploy - デプロイオーケストレーションツール
     - CodeStar - 継続的デリバリーデリバリーツールチェーン全体を設定
     　　ビルドするアプリケーションのタイプと使用するプログラミング言語を選択すると包括的なツールチェーンが作成され最初の土台となるコードと共にプリロードされる
+    
 ---
 
 
