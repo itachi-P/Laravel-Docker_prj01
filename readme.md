@@ -1,16 +1,17 @@
 
 # itachi-P's GitHub repository
-##### ※http://itachi-p.com からアクセスされた方向けのメッセージ
+##### ※http://itachi-p.com からアクセスされた方向けメッセージ
 (よりセキュアなHTTPS接続に対応しました)
 <a href="https://itachi-p.com">HTTPS接続（このページ）</a>
+<a href="https://github.com/itachi-P/Laravel-Docker_prj01/">当GitHubリポジトリ</a>
 
 このページはまだ**工事(準備)中**です。
 
 <a href="http://test.itachi-p.com">テストページ1 Docker & Laradock（開発中）</a><br>
-~~テストページ2~~ （テスト開発完了、停止済）<br>
-- PHP7.2 & Laravel & AWS Elastic Beanstalk/IAM(ユーザー・グループ権限管理)/ACM(HTTPS接続用電子証明)
-/RDS(MySQL)/S3（ストレージ）/Load Balancer（負荷分散）
-/CloudWatch[Logs]（監視→通知・パフォーマンスコントロール)/SimpleNotificationService(SNS、CloudWatchと連動したアラートメール通知)/etc.
+~~テストページ2~~ （テスト開発完了、稼働停止済）<br>
+- PHP7.2 & Laravel & AWS Elastic Beanstalk/IAM(ユーザー・グループ権限管理)/ACM(HTTPS接続用電子証明)<br>
+/RDS(MySQL)/S3（ストレージ）/Load Balancer（負荷分散）<br>
+/CloudWatch[Logs]（メトリクス監視→通知・パフォーマンスコントロール)/SimpleNotificationService(CloudWatchと連動したアラートメール通知)/etc.
 
 ---
 
@@ -44,7 +45,7 @@
   - ローカルでPHP7.3/Laravel/MySQLにてテストアプリ作成
   - 上記アプリケーションをAWS Elastic Beanstalkにデプロイするためにソースバンドル(zip)を作成
   - Elastic Beanstalk 管理ページからデプロイ
-  - <a href="http://tutorials-env.6mt7peepvf.ap-northeast-1.elasticbeanstalk.com/">テストページ2 PHP & Laravel</a>で動作確認
+  - <a href="http://tutorials-env.6mt7peepvf.ap-northeast-1.elasticbeanstalk.com/">テストページ2 PHP & Laravel</a>でDB(RDS)接続までを動作確認
   - 上記ローカルで作成したアプリケーションのデータベース設定をローカルのMySQL(Ver5.7.27)からAWS RDSのMySQL(Ver5.7.26)に設定変更
   - ソースバンドル再作成→手動デプロイを`eb deploy`で自動化
   - AWS EB上からRDSのｍMySQLに接続確認
@@ -54,13 +55,14 @@
   - Amazon Relational Database Service(RDS)連動
   - Amazon CloudWatch(Logs)利用
     - 監視→アラート（Eメール、SMS等）| 設定に基づく何らかのアクション
-      - スケールアウト（パフォーマンス向上）
-      - スケールイン（コスト削減）
+      - スケールアップ（パフォーマンス向上）
+      - スケールダウン（コスト削減）
       - イベント発生→自己トリガーにより自動アクション設定
       - 一定時間ごとのバッチ処理　など
 - 2019/09/25
-  - SSH接続のトラブル、セキュリティグループのインバウンド設定、キーペアとの関連付け等見直し・再設定
-  - Docker非使用のLaravel & データベース接続(RDS上のMySQL)を含むAWS各種マネージドサービスのテスト駆動完了した為Elastic Beanstalk環境停止・終了
+  - SSH接続のトラブル
+    - セキュリティグループのインバウンド設定、キーペアとの関連付け等見直し・再設定
+  - Docker非使用のLaravel & データベース接続(RDS上のMySQL)を含むAWS各種マネージドサービスのテスト駆動が完了した為Elastic Beanstalk環境インスタンス停止・終了
   - DockerベースでのLaravel開発（Laradock）再開（このreadme.mdを含むリポジトリの本体）
     - **最終的には開発したLaravelアプリも含めたカスタムイメージ＆Dockerfileを作成し、それをCircleCIを通して自動ビルド・テスト・デプロイする**
   
@@ -96,7 +98,7 @@
 - **継続的デリバリー/継続的インテグレーション**
   - ツールとしてのCircleCIの利用だけでなく、アプリ開発及び運用、機能追加、リファクタリング等全般においてCI/CD及びその最適ツールの運用を検討する。
 - サーバレス・イベントドリブン化
-  - CloudWatchにより複数のメトリクス監視→何かしらのイベント（アクセス数・パフォーマンス変化や定時実行イベント等）・障害等の発生→*Lambda*によりAPI起動→タスク、スケジュール、バッチ処理、障害対応、スケールアウト（パフォーマンス向上）、スケールイン（コスト削減）を実行
+  - CloudWatchにより複数のメトリクス監視→何かしらのイベント（アクセス数・パフォーマンス変化や定時実行イベント等）・障害等の発生→*Lambda*によりAPI起動→タスク、スケジュール、バッチ処理、障害対応、スケールアップ（パフォーマンス向上）、スケールダウン（コスト削減）を実行
 - MySQL → Amazon Database Aurora（MySQL5.6互換）の利用
   - データベースもAmazon RDS/Aurora等のマネージドサービスを利用し、インフラ導入及び運用のコストカット、インフラ層（レイヤー）の管理をAmazonに運用委任して最上位のアプリケーション開発だけに集中する選択肢も選べるように
 - Amazon 開発者用ツール群の使用検討
@@ -108,7 +110,7 @@
     - CodeDeploy - デプロイオーケストレーションツール
     - CodeStar - 継続的デリバリーデリバリーツールチェーン全体を設定
     　　ビルドするアプリケーションのタイプと使用するプログラミング言語を選択すると包括的なツールチェーンが作成され最初の土台となるコードと共にプリロードされる
-    
+
 ---
 
 
