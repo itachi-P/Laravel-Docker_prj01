@@ -67,6 +67,9 @@ IAM(ユーザー・グループ権限管理)/ACM(HTTPS接続用電子証明)/RDS
   - DockerベースでのLaravel開発（Laradock）再開（このreadme.mdを含むリポジトリの本体）
     - **最終的には開発したLaravelアプリも含めたカスタムイメージ＆Dockerfileを作成し、それをCircleCIを通して自動ビルド・テスト・デプロイする**
 - 2019/09/26
+  - 新規Elastic Beanstalk multi-container Docker環境を立ち上げ
+    - *Auto Scaling, Load Balancing*設定により状況に合わせて最低2〜最高4のインスタンスを稼働し負荷分散する設定
+    - Load Balancerによって新規に生成された複数インスタンス稼働を確認
   - Elastic Beanstalk multi-container Docker, 及びDocker学習(Udemy)
   
 ---
