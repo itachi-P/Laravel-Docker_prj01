@@ -1,8 +1,3 @@
-<head>
-  <title>いたちPテストタイトル</title>
-  <link rel="icon" href="{{ asset('fuca_tehepero_icon_32x32.ico') }}" sizes="32x32">
-</head>
-
 # itachi-P's GitHub repository
 ##### ※http://itachi-p.com からアクセスされた方向けメッセージ
 (よりセキュアなHTTPS接続に対応しました)<br>
