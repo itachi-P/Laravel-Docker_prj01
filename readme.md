@@ -1,9 +1,7 @@
-<html>
 <head>
   <title>いたちPテストタイトル</title>
   <link rel="icon" href="{{ asset('fuca_tehepero_icon_32x32.ico') }}" sizes="32x32">
 </head>
-<body>
 
 # itachi-P's GitHub repository
 ##### ※http://itachi-p.com からアクセスされた方向けメッセージ
@@ -134,6 +132,3 @@ IAM(ユーザー・グループ権限管理)/ACM(HTTPS接続用電子証明)/RDS
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
-
-</body>
-</html>
