@@ -8,5 +8,5 @@ Route::get('/', function () {
 Route::get('/user', 'UserController@index');
 
 # 画像アップロード
-Route::get('/home', 'HomeController@index');
+Route::get('/home', 'HomeController@home');
 Route::post('/upload', 'HomeController@upload');
