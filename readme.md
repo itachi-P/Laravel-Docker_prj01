@@ -1,3 +1,9 @@
+<html>
+<head>
+  <title>いたちPテストタイトル</title>
+  <link rel="icon" href="{{ asset('fuca_tehepero_icon_32x32.ico') }}" sizes="32x32">
+</head>
+<body>
 
 # itachi-P's GitHub repository
 ##### ※http://itachi-p.com からアクセスされた方向けメッセージ
@@ -66,7 +72,7 @@ IAM(ユーザー・グループ権限管理)/ACM(HTTPS接続用電子証明)/RDS
   - Docker非使用のLaravel & データベース接続(RDS上のMySQL)を含むAWS各種マネージドサービスのテスト駆動が完了した為Elastic Beanstalk環境インスタンス停止・終了
   - DockerベースでのLaravel開発（Laradock）再開（このreadme.mdを含むリポジトリの本体）
     - **最終的には開発したLaravelアプリも含めたカスタムイメージ＆Dockerfileを作成し、それをCircleCIを通して自動ビルド・テスト・デプロイする**
-- 2019/09/26
+- 2019/09/26~
   - 新規Elastic Beanstalk multi-container Docker環境を立ち上げ
     - *Auto Scaling, Load Balancing*設定により状況に合わせて最低2〜最高4のインスタンスを稼働し負荷分散する設定
     - Load Balancerによって新規に生成された複数インスタンス稼働を確認
@@ -128,3 +134,6 @@ IAM(ユーザー・グループ権限管理)/ACM(HTTPS接続用電子証明)/RDS
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
+
+</body>
+</html>

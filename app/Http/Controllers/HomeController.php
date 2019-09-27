@@ -6,7 +6,7 @@ use App\Model\Image;
 
 class HomeController extends Controller
 {
-    public function index()
+    public function home()
     {
         $images = Image::all();
         return view('home', ['images' => $images]);
@@ -19,7 +19,7 @@ class HomeController extends Controller
                 'required', // 入力必須であること    
                 'file',     // アップロードされたファイルであること
                 'image',    // 画像ファイルであること
-                'mimes:jpeg,png,mp4',   // MIMEタイプを指定
+                'mimes:jpeg,png',   // MIMEタイプを指定
             ]
         ]);
 
