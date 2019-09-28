@@ -8,11 +8,13 @@
 **タイミング次第で繋がらなかったりエラーが出たりします。ご了承下さい。**
 
 <a href="http://laraveldockertest01-env.vahqeumhmx.ap-northeast-1.elasticbeanstalk.com/">テストページ1B AWS & Docker & Laradock（開発中）</a><br>
+<br>
 ~~テストページ2~~ （テスト開発完了、稼働停止済）<br>
 - PHP7.2 & Laravel & AWS Elastic Beanstalk/VPC/EC2/Route53/<br>
-IAM(ユーザー・グループ権限管理)/ACM(HTTPS接続用電子証明)/RDS(MySQL)/S3(ストレージ)/Load Balancer(負荷分散)<br>
-/CloudWatch(メトリクス監視→通知・パフォーマンス管理)/SimpleNotificationService(CloudWatchと連動したアラート通知)/etc.<br>
-<a href="http://34.84.176.66:8000/">テストページ3 (GCP & Docker/動作確認のみ)</a><br>
+IAM(ユーザー・グループ権限管理)/ACM(HTTPS接続用電子証明)/RDS(MySQL)/S3(ストレージ)/Load Balancer(負荷分散)/<br>
+CloudWatch(メトリクス監視→通知・パフォーマンス管理)/SimpleNotificationService(CloudWatchと連動したアラート通知)/etc.<br>
+<br>
+<a href="http://34.84.176.66:8000/">テストページ3 (GCP & Docker / 当面は動作確認のみ)</a><br>
 
 ---
 
