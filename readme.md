@@ -7,12 +7,12 @@
 このページはまだ**工事(準備)中**です。<br>
 **タイミング次第で繋がらなかったりエラーが出たりします。ご了承下さい。**
 
-<a href="http://laraveldockertest01-env.vahqeumhmx.ap-northeast-1.elasticbeanstalk.com/">テストページ1B Docker & Laradock（開発中）</a><br>
+<a href="http://laraveldockertest01-env.vahqeumhmx.ap-northeast-1.elasticbeanstalk.com/">テストページ1B AWS & Docker & Laradock（開発中）</a><br>
 ~~テストページ2~~ （テスト開発完了、稼働停止済）<br>
 - PHP7.2 & Laravel & AWS Elastic Beanstalk/VPC/EC2/Route53/<br>
 IAM(ユーザー・グループ権限管理)/ACM(HTTPS接続用電子証明)/RDS(MySQL)/S3(ストレージ)/Load Balancer(負荷分散)<br>
-/CloudWatch(Logs)(メトリクス監視→通知・パフォーマンス管理)/SimpleNotificationService(CloudWatchと連動したアラート通知)/etc.
-
+/CloudWatch(Logs)(メトリクス監視→通知・パフォーマンス管理)/SimpleNotificationService(CloudWatchと連動したアラート通知)/etc.<br>
+<a href="http://34.84.176.66:8000/">テストページ3 (GCP & Docker/動作確認のみ)</a><br>
 ---
 
 ### 履歴
@@ -65,11 +65,15 @@ IAM(ユーザー・グループ権限管理)/ACM(HTTPS接続用電子証明)/RDS
   - Docker非使用のLaravel & データベース接続(RDS上のMySQL)を含むAWS各種マネージドサービスのテスト駆動が完了した為Elastic Beanstalk環境インスタンス停止・終了
   - DockerベースでのLaravel開発（Laradock）再開（このreadme.mdを含むリポジトリの本体）
     - **最終的には開発したLaravelアプリも含めたカスタムイメージ＆Dockerfileを作成し、それをCircleCIを通して自動ビルド・テスト・デプロイする**
-- 2019/09/26~
+- 2019/09/26,27
   - 新規Elastic Beanstalk multi-container Docker環境を立ち上げ
     - *Auto Scaling, Load Balancing*設定により状況に合わせて最低2〜最高4のインスタンスを稼働し負荷分散する設定
     - Load Balancerによって新規に生成された複数インスタンス稼働を確認
   - Elastic Beanstalk multi-container Docker, 及びDocker学習(Udemy及び書籍)
+- 2019/09/28
+  - Dockerチュートリアルの一環としてGoogle Cloud Platform(GCP)アカウント作成
+    - `docker-machine`コマンドによりGCEインスタンス生成
+    - ウェブページ公開して動作確認
   
 ---
 
