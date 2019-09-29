@@ -27,7 +27,7 @@ class HomeController extends Controller
             //storeメソッドを使うとlocalhost:8000に固定されてしまうので他のやり方に回避(画像ファイル名加工なし)
             //$path = $request->file->store('public');
             $filename = $request->file->getClientOriginalName(); //一意なID発行の方が望ましい
-            $move = $request->file->move('./images/SpiceCurry/', $filename);
+            $move = $request->file->move('./images/', $filename);
 
             //仮実装
             $user_id = '1';
