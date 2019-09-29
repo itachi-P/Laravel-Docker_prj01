@@ -73,11 +73,11 @@ CloudWatch(メトリクス監視→通知・パフォーマンス管理)/SimpleN
     - *Auto Scaling, Load Balancing*設定により状況に合わせて最低2〜最高4のインスタンスを稼働し負荷分散する設定
     - Load Balancerによって新規に生成された複数インスタンス稼働を確認
   - Elastic Beanstalk multi-container Docker, 及びDocker学習(Udemy及び書籍)
-- 2019/09/28
+- 2019/09/28~30
   - Dockerチュートリアルの一環としてGoogle Cloud Platform(GCP)アカウント作成
     - `docker-machine`コマンドによりGCEインスタンス生成
     - ウェブページ公開して動作確認
-  
+    - 引き続きGCEインスタンスへのSSH接続、インスタンス設定等　及びUdemy・購入電子書籍によるDocker学習継続
 ---
 
 ### (以後の予定)
