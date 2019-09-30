@@ -10,11 +10,13 @@
 <a href="http://laraveldockertest01-env.vahqeumhmx.ap-northeast-1.elasticbeanstalk.com/">テストページ1B AWS & Docker & Laradock（開発中）</a><br>
 <br>
 ~~テストページ2~~ （テスト開発完了、稼働停止済）<br>
-- PHP7.2 & Laravel & AWS Elastic Beanstalk/VPC/EC2/Route53/IAM(ユーザー・グループ権限管理)/<br>
-ACM(HTTPS接続用電子証明)/RDS(MySQL)/S3(ストレージ)/Load Balancer(負荷分散)/<br>
+- PHP7.2 & Laravel & AWS Elastic Beanstalk(ECS)/VPC/EC2/Route53/EBS/IAM(ユーザー・グループ権限管理)/<br>
+S3(ストレージ)/RDS(MySQL)/ACM(HTTPS接続用電子証明)/Load Balancer(負荷分散)/<br>
 CloudWatch(メトリクス監視→通知・パフォーマンス管理)/SimpleNotificationService(CloudWatchと連動したアラート通知)/etc.<br>
 
-<a href="http://34.84.176.66:8000/">テストページ3 (GCP & Docker / 当面は動作確認のみ)</a><br>
+<a href="http://35.212.248.158//">テストページ3 (GCP & Docker / 当面は動作確認のみ)</a><br>
+
+- （参考）[GCPで永久無料枠を利用してサービスを立ち上げたときにしたことの備忘録](https://qiita.com/riku-shiru/items/a870edd9dc0b132e092c)
 
 ---
 
@@ -79,7 +81,9 @@ CloudWatch(メトリクス監視→通知・パフォーマンス管理)/SimpleN
     - ウェブページ公開して動作確認
     - 引き続きGCEインスタンスへのSSH接続、インスタンス設定等　及びUdemy・購入電子書籍によるDocker学習継続
 - 2019/09/30
-  - インスタもどき作成（1週間以内、10/6まで）
+  - GCP（GCE)上にOregonリージョンの無料永久枠で新規インスタンス作成、Dockerイメージ紐付け、起動確認
+- 2019/10/01(予定)
+  - インスタもどき作成開始（1週間以内、10/７(月)まで）
 
 ---
 
