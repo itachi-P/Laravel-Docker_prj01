@@ -14,7 +14,7 @@
 S3(ストレージ)/RDS(MySQL)/ACM(HTTPS接続用電子証明)/Load Balancer(負荷分散)/<br>
 CloudWatch(メトリクス監視→通知・パフォーマンス管理)/SimpleNotificationService(CloudWatchと連動したアラート通知)/etc.<br>
 
-<a href="http://35.212.248.158//">テストページ3 (GCP & Docker / 当面は動作確認のみ)</a><br>
+<a href="http://35.212.248.158/">テストページ3 (GCP & Docker AWS理解優先 > GCP)</a><br>
 
 - （参考）[GCPで永久無料枠を利用してサービスを立ち上げたときにしたことの備忘録](https://qiita.com/riku-shiru/items/a870edd9dc0b132e092c)
 
