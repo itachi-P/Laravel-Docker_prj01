@@ -14,7 +14,7 @@
 /S3(ストレージ)/RDS(MySQL)/ACM(HTTPS接続用電子証明)/Load Balancer(負荷分散)<br>
 /CloudWatch(メトリクス監視→通知・パフォーマンス自動管理)/SimpleNotificationService(CloudWatchと連動したアラート通知)/etc.<br>
 
-<a href="http://35.212.248.158/">テストページ3 (GCP & Docker ただしAWS理解優先 > GCP)</a><br>
+<a href="http:/test-gcp.itachi-p.com/">テストページ3B (GCP & Docker ただしAWS理解優先 > GCP)</a><br>
 
 - （参考）[GCPで永久無料枠を利用してサービスを立ち上げたときにしたことの備忘録](https://qiita.com/riku-shiru/items/a870edd9dc0b132e092c)
 
@@ -83,6 +83,7 @@
 - 2019/09/30
   - GCP（GCE)上にOregonリージョンの無料永久枠で新規インスタンス作成、Dockerイメージ紐付け、起動確認
 - 2019/10/01(予定)
+  - テストページ3（GCP＆Docker) || テストページ１（AWS＆Docker)上でfortuneを走らせるところまで実装
   - インスタもどき作成開始（1週間以内、10/７(月)まで）
 
 ---
