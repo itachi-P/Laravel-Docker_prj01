@@ -10,11 +10,11 @@
 <a href="http://laraveldockertest01-env.vahqeumhmx.ap-northeast-1.elasticbeanstalk.com/">テストページ1B AWS & Docker & Laradock（開発中）</a><br>
 <br>
 ~~テストページ2~~ （テスト開発完了、稼働停止済）<br>
-- PHP7.2 & Laravel & AWS Elastic Beanstalk(ECS)/VPC/EC2/Route53/EBS/IAM(ユーザー・グループ権限管理)/<br>
-S3(ストレージ)/RDS(MySQL)/ACM(HTTPS接続用電子証明)/Load Balancer(負荷分散)/<br>
-CloudWatch(メトリクス監視→通知・パフォーマンス管理)/SimpleNotificationService(CloudWatchと連動したアラート通知)/etc.<br>
+- PHP7.2 & Laravel & AWS Elastic Beanstalk(ECS)/VPC/EC2/Route53/EBS/IAM(ユーザー・グループ権限管理)<br>
+/S3(ストレージ)/RDS(MySQL)/ACM(HTTPS接続用電子証明)/Load Balancer(負荷分散)<br>
+/CloudWatch(メトリクス監視→通知・パフォーマンス自動管理)/SimpleNotificationService(CloudWatchと連動したアラート通知)/etc.<br>
 
-<a href="http://35.212.248.158/">テストページ3 (GCP & Docker AWS理解優先 > GCP)</a><br>
+<a href="http://35.212.248.158/">テストページ3 (GCP & Docker ただしAWS理解優先 > GCP)</a><br>
 
 - （参考）[GCPで永久無料枠を利用してサービスを立ち上げたときにしたことの備忘録](https://qiita.com/riku-shiru/items/a870edd9dc0b132e092c)
 
