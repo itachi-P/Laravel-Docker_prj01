@@ -85,7 +85,7 @@
 - 2019/09/30
   - GCP（GCE)上にOregonリージョンの無料永久枠で新規インスタンス作成、Dockerイメージ紐付け、起動確認
 - 2019/10/01(予定)
-  - テストページ3（GCP＆Docker) || テストページ１（AWS＆Docker)上でfortuneを走らせるところまで実装
+  - テストページ3（GCP＆Docker) || テストページ１（AWS＆Docker)上でfortunesを走らせるところまで実装
   - インスタもどき作成開始（1週間以内、10/７(月)まで）
 
 ---
@@ -119,6 +119,10 @@
 (その他)
 - **継続的デリバリー/継続的インテグレーション**
   - ツールとしてのCircleCIの利用だけでなく、アプリ開発及び運用、機能追加、リファクタリング等全般においてCI/CD及びその最適ツールの運用を検討する。
+
+  - (参考)
+    - [既存のAWS環境を後からTerraformでコード化する](https://dev.classmethod.jp/cloud/aws/aws-with-terraform/)
+    - [10分で理解するTerraform](https://qiita.com/Chanmoro/items/55bf0da3aaf37dc26f73)
 - サーバレス・イベントドリブン化
   - CloudWatchにより複数のメトリクス監視→何かしらのイベント（アクセス数・パフォーマンス変化や定時実行イベント等）・障害等の発生→*Lambda*によりAPI起動→タスク、スケジュール、バッチ処理、障害対応、スケールアップ（パフォーマンス向上）、スケールダウン（コスト削減）を実行
 - MySQL → Amazon Database Aurora（MySQL5.6互換）の利用
