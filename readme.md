@@ -7,7 +7,7 @@
 このページはまだ**工事(準備)中**です。<br>
 **タイミング次第で繋がらなかったりエラーが出たりします。ご了承下さい。**
 
-<a href="http://laraveldockertest01-env.vahqeumhmx.ap-northeast-1.elasticbeanstalk.com/">テストページ1B AWS & Docker & Laradock（開発中）</a><br>
+<a href="http://laraveldockertest01-env.vahqeumhmx.ap-northeast-1.elasticbeanstalk.com/">テストページ1C AWS & Docker & Laradock（開発中）</a><br>
 <br>
 ~~テストページ2~~ （テスト開発完了、稼働停止済）<br>
 - PHP7.2 & Laravel & AWS Elastic Beanstalk(ECS)/VPC/EC2/Route53/EBS/IAM(ユーザー・グループ権限管理)
@@ -84,7 +84,7 @@
     - 引き続きGCEインスタンスへのSSH接続、インスタンス設定等　及びUdemy・購入電子書籍によるDocker学習継続
 - 2019/09/30
   - GCP（GCE)上にOregonリージョンの無料永久枠で新規インスタンス作成、Dockerイメージ紐付け、起動確認
-- 2019/10/01(予定)
+- 2019/10/01~02
   - テストページ3（GCP＆Docker) || テストページ１（AWS＆Docker)上でfortunesを走らせるところまで実装
   - インスタもどき作成開始（1週間以内、10/７(月)まで）
 
