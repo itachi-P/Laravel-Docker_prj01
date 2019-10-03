@@ -95,6 +95,11 @@
     - (参考)[Docker Machine 概要(Docker ドキュメント日本語化プロジェクト)](http://docs.docker.jp/machine/overview.html)
     - Docker Swarm - 標準 Docker API で操作できるDockerに対応するネイティブなクラスタリング用ツール
       - Udemy動画に従い軽めに流す（ざっと全体を一通り理解する程度で充分）→詳細に拘らずアプリの中身開発を優先
+    - Dockerのデータ管理 / 3種類のマウント方法と特性・使い分け
+      - volume (実際にはホスト上のディレクトリ)
+      - bind mount (実際にはホスト上のファイルやディレクトリ)
+      - tmpfs (実際にはホスト上のメモリ)
+    - Docker Compose
   - インスタもどきベース簡易作成
 
 ---
