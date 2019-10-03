@@ -88,7 +88,11 @@
   - テストページ3（GCP＆Docker) || テストページ１（AWS＆Docker)上でfortunesを走らせるところまで実装
   - インスタもどき作成開始（1週間以内、10/７(月)まで）
 - 2019/10/03
-  - Docker(docker-machineコマンド含む)、AWS、Terraterm学習
+  - Docker、AWS、Terraterm学習
+    - Docker Machine - WindowsやMac上のVMで動くDockerホストを作成(Docker Engineを実行)できるVirtualBox,Vagrant互換VM環境
+      1. ローカル(リモートも)にDocker Machineを使い、Docker Engineが動く仮想マシンをプロビジョニングする
+      2. その仮想環境に接続すると、その後はdockerコマンドが実行可能になる
+    - (参考)[Docker Machine 概要(Docker ドキュメント日本語化プロジェクト)](http://docs.docker.jp/machine/overview.html)
   - インスタもどき簡易作成
 
 ---
