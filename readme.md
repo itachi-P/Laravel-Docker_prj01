@@ -85,7 +85,7 @@
 - 2019/09/30
   - GCP（GCE)上にOregonリージョンの無料永久枠で新規インスタンス作成、Dockerイメージ紐付け、起動確認
 - 2019/10/01~02
-  - テストページ3（GCP＆Docker) || テストページ１（AWS＆Docker)上でfortunesを走らせるところまで実装
+  - テストページ3（GCP＆Docker) | テストページ１（AWS＆Docker)上でfortunesを走らせるところまで実装
   - インスタもどき作成開始（1週間以内、10/７(月)まで）
 - 2019/10/03
   - Docker、AWS、Terraterm学習
@@ -93,7 +93,9 @@
       1. ローカル(リモートも)にDocker Machineを使い、Docker Engineが動く仮想マシンをプロビジョニングする
       2. その仮想環境に接続すると、その後はdockerコマンドが実行可能になる
     - (参考)[Docker Machine 概要(Docker ドキュメント日本語化プロジェクト)](http://docs.docker.jp/machine/overview.html)
-  - インスタもどき簡易作成
+    - Docker Swarm - 標準 Docker API で操作できるDockerに対応するネイティブなクラスタリング用ツール
+      - Udemy動画に従い軽めに流す（ざっと全体を一通り理解する程度で充分）→詳細に拘らずアプリの中身開発を優先
+  - インスタもどきベース簡易作成
 
 ---
 
