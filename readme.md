@@ -7,7 +7,7 @@
 このページはまだ**工事(準備)中**です。<br>
 **タイミング次第で繋がらなかったりエラーが出たりします。ご了承下さい。**
 
-<a href="http://laraveldockertest01-env.vahqeumhmx.ap-northeast-1.elasticbeanstalk.com/">テストページ1C AWS & Docker & Laradock（開発中）</a><br>
+<a href="http://itachip.ap-northeast-1.elasticbeanstalk.com/">テストページ1D AWS ElasticBeanstalk multi-container Docker & Laradock（開発中）</a><br>
 <br>
 ~~テストページ2~~ （テスト開発完了、稼働停止済）<br>
 - PHP7.2 & Laravel & AWS Elastic Beanstalk(ECS)/VPC/EC2/Route53/EBS/IAM(ユーザー・グループ権限管理)
